@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CAFETERIA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header>
+    <img class="img-logo" src="img/logo_h.png">
+    <p>JAVA</p>
+    <p>COFFEE SHOP</p>
+</header>
+<div class="rectangulo">
+
+    <!-- SECCION 1 -->
+    <div class="seccion1">
+        <h1>Menú</h1>
+
+        <section class="Producto">
+            <h2>Americano -- $20</h2>
+            <img src="img/americano.avif">
+                <div class="contador">
+                <button class="buttonminus" onclick="cambiarCantidad(0,-1)">-</button>
+                <span id="cant0">0</span>
+                <button class="buttonplus" onclick="cambiarCantidad(0,1)">+</button>
+                </div>
+        </section>
+
+        <section class="Producto">
+            <h2>Cappuchino -- $35</h2>
+            <img src="img/cappuchino.webp">
+                <div class="contador">
+                <button class="buttonminus" onclick="cambiarCantidad(1,-1)">-</button>
+                <span id="cant1">0</span>
+                <button class="buttonplus" onclick="cambiarCantidad(1,1)">+</button>
+                </div>
+        </section>
+
+        <section class="Producto">
+        <h2>Muffin Chocolate -- $15</h2>
+        <img src="img/muffin.jpg">
+            <div class="contador">
+            <button class="buttonminus" onclick="cambiarCantidad(2,-1)">-</button>
+            <span id="cant2">0</span>
+            <button class="buttonplus" onclick="cambiarCantidad(2,1)">+</button>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- SECCION 2 -->
+    <div class="seccion2">
+        <h2>Resumen</h2>
+
+            <div class="fila">
+                <div class="celda" id="p0">Americano</div>
+                <div class="celda" id="c0">0</div>
+                <div class="celda" id="t0">$0</div>
+            </div>
+
+            <div class="fila">
+                <div class="celda" id="p1">Cappuchino</div>
+                <div class="celda" id="c1">0</div>
+                <div class="celda" id="t1">$0</div>
+            </div>
+
+            <div class="fila">
+                <div class="celda" id="p2">Muffin</div>
+                <div class="celda" id="c2">0</div>
+                <div class="celda" id="t2">$0</div>
+            </div>
+
+    </div>
+
+
+    <!-- SECCION 3 -->
+    <div class="seccion3">
+        <h2>Total a pagar</h2>
+
+        <h2>Total: $<span id="total">0</span></h2>
+
+        <input type="text" id="recibido" placeholder="Monto recibido" oninput="calcular()">
+
+        <h2 id="resultado">$0</h2>
+
+        <button onclick="reiniciar()">Reiniciar</button>
+        </div>
+
+    </div>
+</body>
+    <script src="script.js"></script>
+
+</body>
+</html>
